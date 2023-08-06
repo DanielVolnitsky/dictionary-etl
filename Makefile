@@ -1,7 +1,10 @@
 BINARY_NAME=dictionary-etl
 
+.DEFAULT_GOAL=build
+
 build:
 	go build -o build/${BINARY_NAME} cmd/main.go
+.PHONY: build
 
 run:
 	go build -o build/${BINARY_NAME} cmd/main.go
